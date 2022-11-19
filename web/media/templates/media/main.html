@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% load bootstrap5 %}
+
+{% block content %}
+
+    <body style="background-color:aliceblue;">
+        <style>
+            body{
+                font-family: 'Jua', sans-serif;
+            }
+        </style>
+        <head>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+        </head>
+        <!-- <div>
+            <h3>Hello, {{ nickname }}</h3>
+        </div> -->
+        <h1 style="color: #58ACFA; font-size: 450%;" align="center">DAIVerse</h1>
+        <br>
+
+        <br><br>
+        <div align="center">
+            <button onclick="goTo2DView();" style="cursor: pointer; height: 40px; width: 350px; font-size: 19; border-radius: 1.0em; background-color: #58ACFA; color: ghostwhite; border: #58ACFA; font-family: 'Jua', sans-serif;">2D 그래프 업로드</button>
+        </div>
+        <script type="text/javascript">
+            function goTo2DView(){
+             document.location.href = "{% url 'media:instruct2D' %}"
+            }
+         </script>
+        <br><br>
+        <div align="center">
+            <button onclick="goTo3DView();" style="cursor: pointer; height: 40px; width: 350px; font-size: 19; border-radius: 1.0em; background-color: #58ACFA; color: ghostwhite; border: #58ACFA; font-family: 'Jua', sans-serif;">3D 그래프 업로드</button>
+        </div>
+        <script type="text/javascript">
+            function goTo3DView(){
+             document.location.href = "{% url 'media:instruct3D' %}"
+            }
+         </script>
+        <br><br>
+        <div align="center">
+            <button onclick="goToPDFView();" style="cursor: pointer; height: 40px; width: 350px; font-size: 19; border-radius: 1.0em; background-color: #58ACFA; color: ghostwhite; border: #58ACFA; font-family: 'Jua', sans-serif;">PDF 업로드</button>
+        </div>
+        <script type="text/javascript">
+            function goToPDFView(){
+             document.location.href = "{% url 'media:uploadPDF' %}"
+            }
+         </script>
+        <br><br>
+        <div align="center">
+            <button onclick="goToNickView();" style="cursor: pointer; height: 40px; width: 350px; font-size: 19; border-radius: 1.0em; background-color: #58ACFA; color: ghostwhite; border: #58ACFA; font-family: 'Jua', sans-serif;">닉네임 설정</button>
+        </div>
+        <script type="text/javascript">
+            function goToNickView(){
+             document.location.href = "{% url 'media:nickname' %}"
+            }
+         </script>
+        <br><br>
+        <div align="center">
+            <button onclick="goToScriptView();" style="cursor: pointer; height: 40px; width: 350px; font-size: 19; border-radius: 1.0em; background-color: #58ACFA; color: ghostwhite; border: #58ACFA; font-family: 'Jua', sans-serif;">대본 업로드</button>
+        </div>
+        <script type="text/javascript">
+            function goToScriptView(){
+             document.location.href = "{% url 'media:script' %}"
+            }
+         </script>
+
+    </body>
+{% endblock content %}

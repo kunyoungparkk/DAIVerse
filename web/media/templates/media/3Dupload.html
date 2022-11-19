@@ -1,0 +1,289 @@
+<body style="background-color:aliceblue;">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        .main{
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
+        .th{
+            width: 250px;
+        }
+        body{
+                font-family: 'Jua', sans-serif;
+            }
+    </style>
+    <br>
+    <h1 style="color: #0404B4;">3D 그래프 업로드</h1>
+
+    <form action="{% url 'media:uploadFile3D' %}" method="POST" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <th>
+                    파일 선택
+                    <br>
+                </th>
+                <th class="th">기존 파일</th>
+                <th>그래프 타입</th>
+            </tr>
+            <tr>
+                <td align="right">
+                    <h3 style="display:inline">1</h3>
+                    <input type="text" name="fileTitle" placeholder="Choose File">
+                    <input type="file" name="3_uploadedFile_1" >
+                </td>
+                <td align="center">
+                    {{ 3_filetitle_1 }}
+                </td>
+                <td align="center">
+                    <select name="gtype_1" class="form-control">
+                        {% if type_1 == 'd' %}
+                        <option value="dot" selected>Dot</option>
+                        <option value="Bar">Bar</option>
+                        {% else %}
+                        <option value="dot">Dot</option>
+                        <option value="Bar" selected>Bar</option>
+                        {% endif %}
+                    </select>
+                    
+                </td>
+            </tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr>
+                <td align="right">
+                    <h3 style="display:inline">2</h3>
+                    <input type="text" name="fileTitle" placeholder="Choose File">
+                    <input type="file" name="3_uploadedFile_2" >
+                </td>
+                <td align="center">
+                    {{ 3_filetitle_2 }}
+                </td>
+                <td align="center">
+                    
+                    <select name="gtype_2" class="form-control">
+                        {% if type_2 == 'd' %}
+                        <option value="dot" selected>Dot</option>
+                        <option value="Bar">Bar</option>
+                        {% else %}
+                        <option value="dot">Dot</option>
+                        <option value="Bar" selected>Bar</option>
+                        {% endif %}
+                    </select>
+                </td>
+            </tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr>
+                <td align="right">
+                    <h3 style="display:inline">3</h3>
+                    <input type="text" name="fileTitle" placeholder="Choose File">
+                    <input type="file" name="3_uploadedFile_3" >
+                </td>
+                <td align="center">
+                    {{ 3_filetitle_3 }}
+                </td>
+                <td align="center">
+                    <select name="gtype_3" class="form-control">
+                        {% if type_3 == 'd' %}
+                        <option value="dot" selected>Dot</option>
+                        <option value="Bar">Bar</option>
+                        {% else %}
+                        <option value="dot">Dot</option>
+                        <option value="Bar" selected>Bar</option>
+                        {% endif %}
+                    </select>
+                    
+                </td>
+            </tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr>
+                <td align="right">
+                    <h3 style="display:inline">4</h3>
+                    <input type="text" name="fileTitle" placeholder="Choose File">
+                    <input type="file" name="3_uploadedFile_4" >
+                </td>
+                <td align="center">
+                    {{ 3_filetitle_4 }}
+                </td>
+                <td align="center">
+                    <select name="gtype_4" class="form-control">
+                        {% if type_4 == 'd' %}
+                        <option value="dot" selected>Dot</option>
+                        <option value="Bar">Bar</option>
+                        {% else %}
+                        <option value="dot">Dot</option>
+                        <option value="Bar" selected>Bar</option>
+                        {% endif %}
+                    </select>
+                </td>
+            </tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr>
+                <td align="right">
+                    <h3 style="display:inline">5</h3>
+                    <input type="text" name="fileTitle" placeholder="Choose File">
+                    <input type="file" name="3_uploadedFile_5" >
+                </td>
+                <td align="center">
+                    {{ 3_filetitle_5 }}
+                </td>
+                <td align="center">
+                    <select name="gtype_5" class="form-control">
+                        {% if type_5 == 'd' %}
+                        <option value="dot" selected>Dot</option>
+                        <option value="Bar">Bar</option>
+                        {% else %}
+                        <option value="dot">Dot</option>
+                        <option value="Bar" selected>Bar</option>
+                        {% endif %}
+                    </select>
+                    
+                </td>
+            </tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr>
+                <td align="right">
+                    <h3 style="display:inline">6</h3>
+                    <input type="text" name="fileTitle" placeholder="Choose File">
+                    <input type="file" name="3_uploadedFile_6" >
+                </td>
+                <td align="center">
+                    {{ 3_filetitle_6 }}
+                </td>
+                <td align="center">
+                    <select name="gtype_6" class="form-control">
+                        {% if type_6 == 'd' %}
+                        <option value="dot" selected>Dot</option>
+                        <option value="Bar">Bar</option>
+                        {% else %}
+                        <option value="dot">Dot</option>
+                        <option value="Bar" selected>Bar</option>
+                        {% endif %}
+                    </select>
+                    
+                </td>
+            </tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr>
+                <td align="right">
+                    <h3 style="display:inline">7</h3>
+                    <input type="text" name="fileTitle" placeholder="Choose File">
+                    <input type="file" name="3_uploadedFile_7" >
+                </td>
+                <td align="center">
+                    {{ 3_filetitle_7 }}
+                </td>
+                <td align="center">
+                    <select name="gtype_7" class="form-control">
+                        {% if type_7 == 'd' %}
+                        <option value="dot" selected>Dot</option>
+                        <option value="Bar">Bar</option>
+                        {% else %}
+                        <option value="dot">Dot</option>
+                        <option value="Bar" selected>Bar</option>
+                        {% endif %}
+                    </select>
+                    
+                </td>
+            </tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr>
+                <td align="right">
+                    <h3 style="display:inline">8</h3>
+                    <input type="text" name="fileTitle" placeholder="Choose File">
+                    <input type="file" name="3_uploadedFile_8" >
+                </td>
+                <td align="center">
+                    {{ 3_filetitle_8 }}
+                </td>
+                <td align="center">
+                    <select name="gtype_8" class="form-control">
+                        {% if type_8 == 'd' %}
+                        <option value="dot" selected>Dot</option>
+                        <option value="Bar">Bar</option>
+                        {% else %}
+                        <option value="dot">Dot</option>
+                        <option value="Bar" selected>Bar</option>
+                        {% endif %}
+                    </select>
+                    
+                </td>
+            </tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr>
+                <td align="right">
+                    <h3 style="display:inline">9</h3>
+                    <input type="text" name="fileTitle" placeholder="Choose File">
+                    <input type="file" name="3_uploadedFile_9" >
+                </td>
+                <td align="center">
+                    {{ 3_filetitle_9 }}
+                </td>
+                <td align="center">
+                    <select name="gtype_9" class="form-control">
+                        {% if type_9 == 'd' %}
+                        <option value="dot" selected>Dot</option>
+                        <option value="Bar">Bar</option>
+                        {% else %}
+                        <option value="dot">Dot</option>
+                        <option value="Bar" selected>Bar</option>
+                        {% endif %}
+                    </select>
+                    
+                </td>
+            </tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr>
+                <td align="right">
+                    <h3 style="display:inline">10</h3>
+                    <input type="text" name="fileTitle" placeholder="Choose File">
+                    <input type="file" name="3_uploadedFile_10" >
+                </td>
+                <td align="center">
+                    {{ 3_filetitle_10 }}
+                </td>
+                <td align="center">
+                    <select name="gtype_10" class="form-control">
+                        {% if type_10 == 'd' %}
+                        <option value="dot" selected>Dot</option>
+                        <option value="Bar">Bar</option>
+                        {% else %}
+                        <option value="dot">Dot</option>
+                        <option value="Bar" selected>Bar</option>
+                        {% endif %}
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <br>
+        {% csrf_token %}
+        <input type="submit" value="업로드" style="height: 35px; width: 60px; font-size: 16; background-color: #58ACFA; color: ghostwhite; border: #58ACFA; font-family: 'Jua', sans-serif;">
+    </form>
+    <button class="main" onclick="goToMainView();" style="cursor: pointer; height: 23px; width: 170px; font-size: 15; border-radius: 1.0em; background-color: #58ACFA; color: ghostwhite; border: #58ACFA; font-family: 'Jua', sans-serif;">처음으로 돌아가기</button>
+    <script type="text/javascript">
+        function goToMainView(){
+        document.location.href = "{% url 'media:main' %}"
+        }
+    </script>
+</body>

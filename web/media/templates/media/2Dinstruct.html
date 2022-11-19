@@ -1,0 +1,77 @@
+{% load bootstrap5 %}
+
+{% block content %}
+{% load static %}
+    <body style="background-color:aliceblue;">
+        <head>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+        </head>
+        <style type = "text/css">  
+        .upload{
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+
+        .main{
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
+        body{
+                font-family: 'Jua', sans-serif;
+            }
+        .image{
+            position: fixed;
+            top: 260px;
+            left: 50px;
+        }
+        .image2{
+            position: fixed;
+            top: 260px;
+            right: 50px;
+        }
+        </style>
+
+        <h1 style="font-size: 300%; color: #0404B4;" align="center">2D 그래프 업로드 설명</h1>
+
+        <br>
+        <h3 style="font-size: 200%; float: left; margin-left: 100px;">
+            Data File Columns
+        </h3>
+        <h3 style="font-size: 200%; float: right; margin-right: 100px;">
+            In DAIVerse Graph
+        </h3>
+
+        <br><br><br><br><br>
+        <p class="image">
+            <img src="{% static 'csv_2D.png' %}" alt="Blank" width="650px" height="280px">
+        </p>
+
+        <p class="image2">
+            <img src="{% static 'csv_Axis.png' %}" alt="Blank" width="320px" height="300px">
+        </p>
+
+
+        <button class="upload" onclick="goTo2DView();" style="cursor: pointer; height: 23px; width: 170px; font-size: 15; border-radius: 1.0em; background-color: #58ACFA; color: ghostwhite; border: #58ACFA; font-family: 'Jua', sans-serif;">2D 그래프 업로드</button>
+    
+        <script type="text/javascript">
+            function goTo2DView(){
+             document.location.href = "{% url 'media:uploadFile' %}"
+            }
+         </script>
+
+        
+        <button class="main" onclick="goToMainView();" style="cursor: pointer; height: 23px; width: 170px; font-size: 15; border-radius: 1.0em; background-color: #58ACFA; color: ghostwhite; border: #58ACFA; font-family: 'Jua', sans-serif;">처음으로 돌아가기</button>
+
+        <script type="text/javascript">
+            function goToMainView(){
+            document.location.href = "{% url 'media:main' %}"
+            }
+        </script>
+
+
+    </body>
+{% endblock %}

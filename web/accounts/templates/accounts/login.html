@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% load bootstrap5 %}
+{% block content %}
+  <body style="background-color:aliceblue;">
+    <head>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    </head>
+    <style>
+      body{
+                font-family: 'Jua', sans-serif;
+            }
+    </style>
+
+    <h1 style="color: #58ACFA; font-size: 450%;" align="center">DAIVerse</h1>
+    <div align="center">
+        {% for message in messages %}
+            {{ message.tag }}
+            {{ message }}
+        {% endfor %}
+    </div>
+    <br>
+    <br>
+
+    <h1 style="font-size: 300%;" align="center">Login</h1>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        
+        
+        <h3 align="center">Username:</h3>
+        <div align="center">
+          {{ form.username }}
+        </div>
+        <br>
+        <h3 align="center">Password:</h3>
+        <div align="center">
+          {{ form.password }}
+        </div>
+        <br>
+        <div align="center">
+          <input type="submit" value="로그인" style="height: 35px; width: 60px; font-size: 16; background-color: #58ACFA; color: ghostwhite; border: #58ACFA; font-family: 'Jua', sans-serif;">
+        </div>
+
+    </form>
+
+  </body>
+{% endblock content %}
+
+

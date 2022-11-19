@@ -1,0 +1,50 @@
+<body style="background-color:aliceblue;">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        .main{
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
+        .th{
+            width: 250px;
+        }
+        body{
+                font-family: 'Jua', sans-serif;
+            }
+    </style>
+    <br>
+    <h1 style="color: #0404B4;">PDF 업로드</h1>
+
+    <form action="{% url 'media:uploadPDF' %}" method="POST" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <th>파일 선택</th>
+                <th class="th">기존 파일</th>
+            </tr>
+            <tr>
+                <td align="right">
+                    <input type="text" name="fileTitle" placeholder="Choose File">
+                    <input type="file" name="uploadedFile_pdf" >
+                </td>
+                <td align="center">
+                    {{ pdf }}
+                </td>
+            </tr>
+        </table>
+        <br>
+        {% csrf_token %}
+        <input type="submit" value="업로드" style="height: 35px; width: 60px; font-size: 16; background-color: #58ACFA; color: ghostwhite; border: #58ACFA; font-family: 'Jua', sans-serif;">
+    </form>
+    
+    <button class="main" onclick="goToMainView();" style="cursor: pointer; height: 23px; width: 170px; font-size: 15; border-radius: 1.0em; background-color: #58ACFA; color: ghostwhite; border: #58ACFA; font-family: 'Jua', sans-serif;">처음으로 돌아가기</button>
+    <script type="text/javascript">
+        function goToMainView(){
+        document.location.href = "{% url 'media:main' %}"
+        }
+    </script>
+</body>
